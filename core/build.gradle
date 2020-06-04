@@ -1,0 +1,12 @@
+targetCompatibility = '1.7'
+apply plugin: "java"
+sourceCompatibility = '1.7'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceSets.main.java.srcDirs = ["src/"]
+eclipse.project {
+    name = appName + "-core"
+}
+dependencies {
+    implementation files('libs/tween-engine-api-sources.jar')
+    implementation files('libs/tween-engine-api.jar')
+}
